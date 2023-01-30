@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Quotes </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/2.0.3/pure-min.css">
+<style>
+     body {
+	   font-family: "Helvetica"; 
+       margin-left:14px;
+       margin-top:14px;
+       margin-top:10px;
+       font-size:18px;
+    }
+    h4  {
+        font-size: 18px;
+        font-weight: 600;
+        color: #33FF61;
+    }
+    td {
+        vertical-align: top;
+    }
+    a {
+        color: #0588A2;
+        font-weight: 800;
+    }
+</style>
+</head>
+
+<body>
+    <h4>Quotes:</h4>
+    <table class="pure-table pure-table-horizontal pure-table-striped" style="width:1500px;">
+    
+	<?php    
+	
+	$file = fopen("quotes.csv", "r");
+	$line = 0;
+	
+	while (!feof($file) ) {
+		
+		$line_of_text = fgets($file);
+		
+		if ($line == 0) {
+		 $labels = explode('|', $line_of_text);
+		 
+		 echo '<tr>';
+		 
+		 foreach ($labels as $val) {
+			 echo '<td>' . $val . '</td>';
+		 }
+		 echo '</tr>';
+		 $line++;
+		}	
+		else {
+			$record  = explode('|', $line_of_text);
+			echo '<tr>';
+			for ($i = 0; $i < count($labels); $i++)  {
+				if ($i == 3) {
+					echo '<td><a href="' . $record[$i] . '">' . $record[0] .'</a></td>';
+					
+				}
+				elseif ($i == 4) {
+					echo '<td><img src="' . $record[$i] . '" height=100px" /></td>';
+					
+				}
+				else {
+					echo '<td>' . $record[$i] . '</td>';
+				}
+			}
+			echo '</tr>';
+		}
+	}
+
+	fclose($file);	
+	
+
+	?>
+		
+    </table>
+</body>
+</html>
