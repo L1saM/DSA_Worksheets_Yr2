@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<head>
+    <body>  
+    <h1>My Favourite Things </h1>
+    <h2>Week 2 </h2>
+
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+        }
+        th {
+          text-align: left;
+          font-style: italic; 
+        }
+
+
+        </style>
+        </head>
+        <body>
+        
+        
+        <p>Here are some of my favourite things: </p>
+        
+        <table style="width:100%">
+          <tr>
+          </tr>
+          <tr>
+            <td>Hobbies</td>
+            <td>Skating, Piano, Music, Singing, art</td>
+            
+          </tr>
+          <tr>
+            <td>Films</td>
+            <td>Underworld, Resident Evil & Marvel movies</td>
+            
+          </tr>
+          <tr>
+            <td>Sports</td>
+            <td>Football, Badminton & Hockey.</td>
+
+            <tr>
+             <td>Games</td>
+                <td>StarDew Valley, Sims & Solitare.</td>
+
+            <tr>
+             <td>Recent Books</td>
+                <td>Life will be the death of me- Chelsea Handler & Mythos - Stephen Fry</td>
+
+            </tr>
+            <tr>
+              <td>Bands</td>
+              <td>Fleetwood Ma & The Veronicas. </td>
+  
+              <tr>
+               <td>Artists</td>
+                  <td>Lady Gaga, Lewis Capaldi & Sia. </td>
+  
+              <tr>
+               <td>Numbers</td>
+                  <td>3 & 11. </td>
+                
+                </tr>
+                <tr>
+                  <td>Recently watched video</td>
+                  <td>Lady Gaga - Bad Romance--->
+                      
+  <p>
+  Video
+  
+  Recently_watched_video: <p> <iframe width="560" height="315" src="https://www.youtube.com/embed/qrO4YZeyl0I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </p>
+                  </td>
+
+                
+          </tr>
+</table>
+</body>
+</head>
